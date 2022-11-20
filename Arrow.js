@@ -1,4 +1,4 @@
-class Arrow{
+module.exports = class Arrow{
     constructor (x, y) {
         this.x = x;
         this.y = y;

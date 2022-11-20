@@ -1,4 +1,5 @@
-class Grass extends parent {
+var Parent = require ("./parent")
+module.exports = class Grass extends Parent {
  
     mul() {
         this.multiply++;
