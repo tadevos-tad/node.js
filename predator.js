@@ -33,9 +33,13 @@ module.exports=class Predator {
         }
         return found;
     }
-
+    random(i){
+        let found = this.chooseCell(i);
+        let result = Math.floor(Math.random()*found.length)
+        return found[result];
+    }
     mul() {
-        let newCell = random(this.chooseCell(0));
+        let newCell = this.random(0);
         if (newCell) {
             var newX = newCell[0];
             var newY = newCell[1];
@@ -48,8 +52,8 @@ module.exports=class Predator {
     }
     
     move() {
-        var found = this.chooseCell(0);
-        var newCell = random(found);
+        // var found = this.chooseCell(0);
+        var newCell = this.random(0);
         
         if(newCell) {
             var newX = newCell[0];
@@ -69,8 +73,8 @@ module.exports=class Predator {
 
     eat() {
 
-        var found = this.chooseCell(2);
-        var newCell = random(found);
+        // var found = this.chooseCell(2);
+        var newCell = this.random(2);
 
         if (newCell) {
             var newX = newCell[0];

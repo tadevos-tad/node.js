@@ -1,0 +1,91 @@
+#grass {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: #43A047;
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+#grasseater {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgb(251, 255, 0);
+    color: black;
+    font-size: 1.25em;
+    border: none;
+}
+#predator {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgb(209, 61, 61);
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+#rain {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgb(62, 49, 231);
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+#arrow {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+#mashrooms {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgb(192, 174, 202);
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+#spring {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgb(67, 173, 72);
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+#summer {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgb(221, 155, 56);
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+#aotum {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgb(75, 54, 11);
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+#winter {
+    width: 150px;
+    height: 50px;
+    border-radius: 0;
+    background-color: rgb(67, 154, 160);
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+

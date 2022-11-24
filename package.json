@@ -11,6 +11,15 @@
   "keywords": [],
   "dependencies": {
     "express": "^4.18.2",
-    "socket.io": "^4.5.3"
-  }
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadevos-tad/node.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tadevos-tad/node.js/issues"
+  },
+  "homepage": "https://github.com/tadevos-tad/node.js#readme"
 }
