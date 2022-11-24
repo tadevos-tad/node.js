@@ -98,6 +98,8 @@ function game(){
     // for (let i = 0; i < arrowArr.length; i++) {
     //     arrowArr[i].eat();
     // }
+
+  io.sockets.emit('send matrix', matrix);
 }
 
 setInterval(game,1000)
