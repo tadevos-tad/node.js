@@ -1,74 +1,18 @@
-// var matrix = [
-//     [0, 0, 1, 4, 2, 4, 0, 1, 0, 4, 2, 4, 1, 0, 2, 4, 0, 1, 0, 4, 1,0,1,2,1],
-//     [0, 0, 1, 4, 2, 4, 0, 1, 0, 4, 2, 4, 1, 0, 2, 4, 0, 1, 0, 4, 1,1,0,1,0],
-//     [0, 0, 1, 4, 2, 4, 0, 1, 0, 4, 2, 4, 1, 0, 2, 4, 0, 1, 0, 4, 1,1,1,0,2],
-//     [1, 0, 2, 0, 4, 1, 0, 1, 2, 1, 2, 2, 1, 4, 2, 0, 4, 1, 0, 1, 0,0,0,1,1],
-//     [0, 1, 4, 3, 2, 0, 2, 3, 0, 1, 1, 2, 1, 3, 4, 1, 0, 1, 0, 0, 1,1,2,1,1],
-//     [3, 0, 1, 4, 1, 2, 4, 1, 1, 2, 3, 0, 1, 3, 2, 0, 4, 1, 0, 4, 0,1,3,1,1],
-//     [1, 1, 3, 2, 4, 1, 0, 1, 0, 0, 3, 1, 4, 3, 0, 4, 0, 1, 4, 2, 0,1,0,1,1],
-//     [2, 1, 1, 1, 2, 0, 1, 0, 2, 2, 1, 1, 0, 2, 2, 1, 0, 0, 2, 0, 1,1,1,1,1],
-//     [1, 0, 2, 1, 4, 1, 2, 1, 2, 0, 1, 1, 4, 2, 0, 1, 0, 1, 0, 2, 0,2,0,0,1],
-//     [0, 1, 0, 4, 2, 0, 1, 3, 4, 1, 3, 1, 0, 2, 4, 1, 0, 1, 0, 1, 0,1,0,0,1],
-//     [3, 0, 4, 0, 2, 1, 0, 1, 1, 0, 2, 1, 3, 2, 0, 1, 4, 1, 3, 0, 1,1,0,0,1],
-//     [1, 1, 0, 2, 4, 1, 3, 1, 0, 1, 0, 2, 4, 2, 4, 1, 2, 1, 0, 2, 0,1,0,1,1],
-//     [2, 1, 4, 0, 2, 2, 1, 0, 2, 0, 1, 1, 0, 2, 0, 1, 0, 1, 3, 0, 0,1,0,1,0],
-//     [0, 4, 1, 4, 2, 4, 3, 1, 0, 2, 1, 0, 1, 0, 2, 0, 2, 0, 2, 0, 2,2,1,0,0],
-//     [1, 0, 2, 2, 4, 1, 2, 1, 4, 0, 2, 0, 1, 2, 2, 0, 4, 1, 3, 0, 0,2,1,0,1],
-//     [2, 1, 3, 4, 2, 0, 2, 1, 2, 1, 2, 4, 1, 0, 2, 1, 1, 2, 0, 4, 2,0,0,0,1],
-//     [3, 4, 1, 0, 1, 4, 2, 1, 1, 1, 1, 2, 1, 0, 2, 4, 1, 2, 0, 0, 2,0,2,1,0],
-//     [1, 1, 4, 2, 0, 1, 4, 1, 4, 2, 1, 2, 0, 2, 0, 1, 1, 1, 1, 4, 0,1,1,0,1],
-//     [2, 1, 0, 1, 2, 0, 1, 0, 2, 1, 3, 1, 0, 2, 0, 1, 4, 0, 1, 0, 2,1,1,2,1],
-//     [1, 0, 2, 1, 3, 1, 3, 2, 0, 2, 1, 1, 0, 2, 0, 1, 0, 1, 2, 2, 2,0,1,0,1],
-//     [0, 1, 4, 0, 2, 0, 1, 3, 0, 4, 1, 1, 0, 2, 4, 1, 3, 1, 3, 1, 1,2,0,2,1],
-//     [2, 0, 1, 1, 1, 2, 0, 1, 1, 2, 1, 1, 3, 2, 0, 1, 2, 0, 2, 0, 0,2,2,0,1],
-//     [1, 1, 3, 2, 1, 3, 0, 1, 0, 2, 1, 1, 2, 2, 1, 2, 0, 1, 2, 0, 1,4,0,0,1],
-//     [0, 1, 3, 3, 2, 2, 1, 2, 2, 1, 2, 1, 2, 2, 0, 1, 0, 1, 3, 0, 0,0,3,1,1],
-//     [1, 1, 3, 2, 1, 3, 0, 1, 0, 2, 1, 1, 2, 2, 0, 2, 0, 1, 2, 0, 1,4,0,0,1],
-//     [0, 1, 3, 3, 2, 2, 1, 2, 2, 1, 2, 1, 2, 2, 0, 1, 0, 1, 3, 0, 0,0,3,1,1],
-//     [0, 5, 2, 1, 5, 0, 1, 3, 2, 3, 5, 0, 1, 2, 3, 1, 5, 1, 2, 5, 3,5,0,0,1]
-// ];
 var socket = io();
-
 var side = 20;
-// const grassArr = [];
-// const grassEaterArr = [];
-// const predatorArr = [];
-// const rainArr = [];
-// const arrowArr = [];
-
-
-
+var stats = {}
 
 function setup() {
     frameRate(5);
     createCanvas(500, 500);
-    // for (let y = 0; y < matrix.length; y++) {
-    //     for (let x = 0; x < matrix[y].length; x++) {
-    //         if (matrix[y][x] == 1) {
-    //             grassArr.push(new Grass(x, y, 1));
-    //         }
-    //         else if (matrix[y][x] == 2) {
-    //             grassEaterArr.push(new GrassEater(x, y, 2));
-    //         }
-    //         else if (matrix[y][x] == 3) {
-    //             predatorArr.push(new Predator(x, y, 3));
-    //         }
-    //         else if (matrix[y][x] == 4) {
-    //             rainArr.push(new Rain(x, y, 4));
-    //         }
-    //         else if (matrix[y][x] == 5) {
-    //             arrowArr.push(new Arrow(x, y, 5));
-    //         }
-    //     }
-    // }
-    // console.log(grassArr[0].chooseCell(0));
 
 }
 
-
+document.getElementById("season").innerText = "Spring";
 
 function update(matrix) {
-    for (let y = 0; y < matrix.length; y++) {
+
+      for (let y = 0; y < matrix.length; y++) {
 
         for (let x = 0; x < matrix[y].length; x++) {
 
@@ -83,11 +27,17 @@ function update(matrix) {
             }
             else if (matrix[y][x] == 3) {
                 fill("red");
-            } else if (matrix[y][x] == 4) {
+            }
+            else if (matrix[y][x] == 4) {
                 fill(" blue");
+            } else if (matrix[y][x] == 6) {
+                fill("pink");
             }
             else if (matrix[y][x] == 5) {
-                fill(" black");
+                fill("black");
+            }
+            else if (matrix[y][x] == 7) {
+                fill("wight");
             }
 
             rect(x * side, y * side, side, side)
@@ -96,27 +46,29 @@ function update(matrix) {
 
     }
 
-    // for (let i = 0; i < grassArr.length; i++) {
-    //     grassArr[i].mul();
-    // }
-    // for (let i = 0; i < grassEaterArr.length; i++) {
-    //     grassEaterArr[i].eat();
-
-
-
-    // }
-    // for (let i = 0; i < predatorArr.length; i++) {
-    //     predatorArr[i].eat();
-
-    // }
-    // for (let i = 0; i < rainArr.length; i++) {
-    //     rainArr[i].eat();
-        
-    // }
-    // for (let i = 0; i < arrowArr.length; i++) {
-    //     arrowArr[i].eat();
-    // }
-
 }
-
+function changeStats(stats){
+    document.getElementById('grassCount').innerText = "grass: " + stats.grass;
+    document.getElementById('grasseaterCount').innerText = "grasseater: "+stats.grasseater;
+    document.getElementById('predatorCount').innerText = "predator: "+stats.predator;
+    document.getElementById('epredatorCount').innerText = "epredator: "+stats.epredator;
+}
 socket.on("send matrix", update);
+socket.on('send stats', changeStats);
+
+function toSpring() {
+    socket.emit("toSpring");
+    document.getElementById("season").innerText = "Spring";
+}
+function toSummer() {
+    socket.emit("toSummer");
+    document.getElementById("season").innerText = "Summer";
+}
+function toAutumn() {
+    socket.emit("toAutumn");
+    document.getElementById("season").innerText = "Autumn";
+}   
+function toWinter() {
+    socket.emit("toWinter");
+    document.getElementById("season").innerText = "Winter";
+}

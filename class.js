@@ -1,3 +1,4 @@
+
 var Parent = require ("./parent")
 module.exports = class Grass extends Parent {
     random(i){

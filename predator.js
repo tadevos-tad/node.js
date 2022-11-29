@@ -38,18 +38,18 @@ module.exports=class Predator {
         let result = Math.floor(Math.random()*found.length)
         return found[result];
     }
-    mul() {
-        let newCell = this.random(0);
-        if (newCell) {
-            var newX = newCell[0];
-            var newY = newCell[1];
-            matrix[newY][newX] = 3;
-            predatorArr.push(new Predator(newX, newY));
-            this.energy = 15;
-        }
+    // mul() {
+    //     let newCell = this.random(0);
+    //     if (newCell) {
+    //         var newX = newCell[0];
+    //         var newY = newCell[1];
+    //         matrix[newY][newX] = 3;
+    //         predatorArr.push(new Predator(newX, newY));
+    //         this.energy = 15;
+    //     }
         
         
-    }
+    // }
     
     move() {
         // var found = this.chooseCell(0);
@@ -92,12 +92,10 @@ module.exports=class Predator {
                 }
             }
             if (this.energy >= 20) {
-                this.mul();
+                this.move();
             }
         }
-        else {
-            this.move();
-        }
+        
     }
 
 
